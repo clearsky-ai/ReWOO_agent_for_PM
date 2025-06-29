@@ -21,7 +21,7 @@ os.environ["LANGCHAIN_PROJECT"] = "Deloitte_REWOO_PM_extended"
 langchain.debug = True
 
 # Defining agent components
-model = ChatOpenAI(temperature=0, model_name="gpt-4-1106-preview")
+model = ChatOpenAI(temperature=0, model_name="gpt-4.1-mini")
 
 # Initializing agent
 if __name__ == "__main__":

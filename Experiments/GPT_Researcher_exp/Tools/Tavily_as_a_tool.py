@@ -7,15 +7,15 @@ def ResearchGPT(input: str) -> str:
     """
     # Normal tool executio
         # Setting input args
-    old_venv_activate_path = "/Users/maxvogt/Documents/GitHub/Thesis/GPT_Researcher_Venv/bin/activate"
-    venv_activate_path = "/Users/maxvogt/Documents/GitHub/Thesis/GPT_Researcher_VirtualEnv"
+    # old_venv_activate_path = "/Users/maxvogt/Documents/GitHub/Thesis/GPT_Researcher_Venv/bin/activate"
+    # venv_activate_path = "/Users/maxvogt/Documents/GitHub/Thesis/GPT_Researcher_VirtualEnv"
 
-    old_python_file_path = "/Users/maxvogt/Documents/GitHub/Thesis/GitHub/Master-Thesis/Prototype/Tools/GPT-researcher.py"
-    python_file_path = "/Users/maxvogt/Documents/GitHub/Thesis/GitHub/Master-Thesis/Prototype/Tools/new_GPT_researcher.py"
+    old_python_file_path = "./Prototype/Tools/GPT-researcher.py"
+    python_file_path = "./Prototype/Tools/new_GPT_researcher.py"
     input_question = input
 
     # Running GPT-researcher in different venv
-    report = asyncio.run(call_other_environment(venv_activate_path, python_file_path, input_question))
+    report = asyncio.run(call_other_environment(python_file_path, input_question))
     # loop = asyncio.new_event_loop()
     # report = loop.run_until_complete(call_other_environment(venv_activate_path, python_file_path, input_question))
 

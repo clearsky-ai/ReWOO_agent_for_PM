@@ -3,7 +3,7 @@ import pandas as pd
 import os
 import sys
 from dotenv import load_dotenv
-sys.path.append('/Users/maxvogt/Documents/GitHub/Thesis/GitHub/Master-Thesis/Prototype/Tools/Process_Mining/')
+sys.path.append('./Prototype/Tools/Process_Mining/')
 from CSV_config import CSV_format
 
 # Load environment variables from .env file
@@ -32,7 +32,7 @@ def main(input: str) -> str:
     abstraction = pm4py.llm.abstract_dfg(event_log)
    
     openai_key = os.getenv('OPENAI_API_KEY')
-    model = "gpt-3.5-turbo"
+    model = "gpt-4.1-mini"
 
     prompt = input + abstraction
     print(prompt)

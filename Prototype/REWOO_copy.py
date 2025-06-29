@@ -31,7 +31,7 @@ os.environ["LANGCHAIN_PROJECT"] = "Deloitte_REWOO_PM_extended"
 langchain.debug = True
 
 # Defining agent components
-model = ChatOpenAI(temperature=0, model_name="gpt-4-1106-preview")
+model = ChatOpenAI(temperature=0, model_name="gpt-4.1-mini")
 
 class ReWOO(TypedDict):
     task: str
@@ -155,15 +155,15 @@ if __name__ == "__main__":
     task1_var = "Can you find the bottlenecks and inefficiencies in process based on the following event log, filepath=/Users/maxvogt/Downloads/Event logs/order_to_cash_event_log_05012023.csv? This is an order to cash process at Procter & Gamble (P&G). What are potential causes for the inefficiencies that you identified? Please use the variants approach for process discovery."
 
     # required class settings: sep = ',', case_id, activity, timestamp
-    task2_DFG = "Can you find the bottlenecks and inefficiencies in process based on the following event log, filepath=/Users/maxvogt/Documents/GitHub/Thesis/Event Logs/purchase_to_pay_event_log.csv? This is an purchase to pay process at IKEA. What are potential causes for the inefficiencies that you identified? Please use the DFG approach for process discovery."
-    task2_TP = "Can you find the bottlenecks and inefficiencies in process based on the following event log, filepath=/Users/maxvogt/Documents/GitHub/Thesis/Event Logs/purchase_to_pay_event_log.csv? This is an purchase to pay process at IKEA. What are potential causes for the inefficiencies that you identified? Please use the temporal profile approach for process discovery."
-    task2_var = "Can you find the bottlenecks and inefficiencies in process based on the following event log, filepath=/Users/maxvogt/Documents/GitHub/Thesis/Event Logs/purchase_to_pay_event_log.csv? This is an purchase to pay process at IKEA. What are potential causes for the inefficiencies that you identified? Please use the variants approach for process discovery."
+    task2_DFG = "Can you find the bottlenecks and inefficiencies in process based on the following event log, filepath=./Event_Logs/purchase_to_pay_event_log.csv? This is an purchase to pay process at IKEA. What are potential causes for the inefficiencies that you identified? Please use the DFG approach for process discovery."
+    task2_TP = "Can you find the bottlenecks and inefficiencies in process based on the following event log, filepath=./Event_Logs/purchase_to_pay_event_log.csv? This is an purchase to pay process at IKEA. What are potential causes for the inefficiencies that you identified? Please use the temporal profile approach for process discovery."
+    task2_var = "Can you find the bottlenecks and inefficiencies in process based on the following event log, filepath=./Event_Logs/purchase_to_pay_event_log.csv? This is an purchase to pay process at IKEA. What are potential causes for the inefficiencies that you identified? Please use the variants approach for process discovery."
 
     # Queries for other perspectives than inefficiencies
-    task2_var_audit_risk = "Can you find the audit risks in the process based on the following event log, filepath=/Users/maxvogt/Documents/GitHub/Thesis/Event Logs/purchase_to_pay_event_log.csv? This is an purchase to pay process at IKEA. What are the audit risks for specific steps that you identified? Please use the variants approach for process discovery."
-    task2_var_sustainability_risk = "Can you find the sustainability risks in the process based on the following event log, filepath=/Users/maxvogt/Documents/GitHub/Thesis/Event Logs/purchase_to_pay_event_log.csv? This is an purchase to pay process at IKEA. What are the sustainability risks for specific steps that you identified? Please use the variants approach for process discovery."
-    task2_TP_cyber_risk = "Can you find the cyber security risks in the process based on the following event log, filepath=/Users/maxvogt/Documents/GitHub/Thesis/Event Logs/purchase_to_pay_event_log.csv? This is an purchase to pay process at IKEA. What are the cyber security risks for specific steps that you identified? Please use the temporal profile approach for process discovery."
-    task2_TP_financial_risk = "Can you find the financial risks in the process based on the following event log, filepath=/Users/maxvogt/Documents/GitHub/Thesis/Event Logs/purchase_to_pay_event_log.csv? This is an purchase to pay process at IKEA. What are the financial risks for specific steps that you identified? Please use the temporal profile approach for process discovery."
+    task2_var_audit_risk = "Can you find the audit risks in the process based on the following event log, filepath=./Event_Logs/purchase_to_pay_event_log.csv? This is an purchase to pay process at IKEA. What are the audit risks for specific steps that you identified? Please use the variants approach for process discovery."
+    task2_var_sustainability_risk = "Can you find the sustainability risks in the process based on the following event log, filepath=./Event_Logs/purchase_to_pay_event_log.csv? This is an purchase to pay process at IKEA. What are the sustainability risks for specific steps that you identified? Please use the variants approach for process discovery."
+    task2_TP_cyber_risk = "Can you find the cyber security risks in the process based on the following event log, filepath=./Event_Logs/purchase_to_pay_event_log.csv? This is an purchase to pay process at IKEA. What are the cyber security risks for specific steps that you identified? Please use the temporal profile approach for process discovery."
+    task2_TP_financial_risk = "Can you find the financial risks in the process based on the following event log, filepath=./Event_Logs/purchase_to_pay_event_log.csv? This is an purchase to pay process at IKEA. What are the financial risks for specific steps that you identified? Please use the temporal profile approach for process discovery."
 
     # For P&G
     task1_var_audit_risk = "Can you find the causes for audit risks in process based on the following event log, filepath=/Users/maxvogt/Downloads/Event logs/order_to_cash_event_log_05012023.csv? This is an order to cash process at Procter & Gamble (P&G). What are the audit risks for specific steps that you identified? Please use the variants approach for process discovery."
@@ -174,7 +174,7 @@ if __name__ == "__main__":
     # Amazon example without specified PM approach
     task1_audit_risk_NA = "Can you find the causes for audit risks in process based on the following event log, filepath=/Users/maxvogt/Downloads/Event logs/order_to_cash_event_log_05012023.csv? This is an order to cash process at Amazon. What are the audit risks for specific steps that you identified?"
     task1_inefficiency_NA = "Can you find the bottlenecks and inefficiencies in process based on the following event log, filepath=/Users/maxvogt/Downloads/Event logs/order_to_cash_event_log_05012023.csv? This is an order to cash process at Procter & Gamble (P&G). What are potential causes for the inefficiencies that you identified?"
-    task2_TP_cyber_NA = "Can you find the cyber security risks in the process based on the following event log, filepath=/Users/maxvogt/Documents/GitHub/Thesis/Event Logs/purchase_to_pay_event_log.csv? This is an purchase to pay process at IKEA. What are the cyber security risks for specific steps that you identified?"
+    task2_TP_cyber_NA = "Can you find the cyber security risks in the process based on the following event log, filepath=./Event_Logs/purchase_to_pay_event_log.csv? This is an purchase to pay process at IKEA. What are the cyber security risks for specific steps that you identified?"
 
     # Paper experiment query
     exp_DFG_audit = "Can you find the audit risks in the process based on the following event log, filepath=/Users/maxvogt/Downloads/Event logs/order_to_cash_event_log_05012023.csv? This is an order to cash process at Procter & Gamble (P&G). What are the audit risks for specific steps that you identified? Please use the DFG approach for process discovery."

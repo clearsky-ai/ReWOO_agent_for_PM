@@ -9,7 +9,7 @@ from .Dotted_chart import dotted_chart_vis
 
 # from CSV_config import CSV_format
 # import sys
-# sys.path.append('/Users/maxvogt/Documents/GitHub/Thesis/GitHub/Master-Thesis/Prototype/')
+# sys.path.append('./Prototype/')
 
 # # Now you can import modules from this directory
 # from General_Settings import Analytics_Settings
@@ -63,7 +63,7 @@ def analytics_visualizer(event_log, file_type):
     return
 
 if __name__ == "__main__":
-    file_path = "/Users/maxvogt/Documents/GitHub/Thesis/Event Logs/review_example_large.xes"
+    file_path = "./Event_Logs/review_example_large.xes"
     if "csv" in file_path:
       # For CSV file formats paramters for 3 columns have to be set manually here
       df = pd.read_csv(file_path, sep=',')

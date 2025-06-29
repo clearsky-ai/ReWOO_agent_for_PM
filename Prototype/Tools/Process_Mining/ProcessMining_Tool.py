@@ -48,7 +48,7 @@ def process_discovery(file_path: str) -> str:
     original_query = text
    
     openai_key = os.getenv('OPENAI_API_KEY')
-    model = "gpt-3.5-turbo"
+    model = "gpt-4.1-mini"
     # Building prompt with ICL
     template = """"
     You are a world class process consultant, specialized in analyzing processes and the components of processes. You will be tasked to make an analysis on a provided process (for instance on inefficiencies, audit risks, regulatory risks, etc.). From this process you will have to select a top 3 of process steps or components.

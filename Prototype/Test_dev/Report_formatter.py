@@ -8,7 +8,7 @@ load_dotenv()
 
 def main():
     openai_key = os.getenv('OPENAI_API_KEY')
-    #model = "gpt-3.5-turbo"
+    #model = "gpt-4.1-mini"
     model = "gpt-4-turbo"
 
     # importing unformatted report from txt file

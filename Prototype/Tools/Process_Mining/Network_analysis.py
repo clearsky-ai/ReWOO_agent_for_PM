@@ -8,6 +8,6 @@ def Network_analysis_vis(file_path):
 
 
 if __name__ == "__main__":
-    file_path = "/Users/maxvogt/Documents/GitHub/Thesis/Event Logs/receipt.xes"
+    file_path = "./Event_Logs/receipt.xes"
     Network_analysis_vis(file_path)
 

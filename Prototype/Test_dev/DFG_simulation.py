@@ -4,7 +4,7 @@ from pm4py.algo.discovery.alpha import algorithm as alpha_miner
 from pm4py.objects.log.importer.xes import importer as xes_importer
 from pm4py.visualization.petri_net import visualizer as pn_vis
 
-file_path = "/Users/maxvogt/Documents/GitHub/Thesis/Event Logs/PrepaidTravelCost.xes"
+file_path = "./Event_Logs/PrepaidTravelCost.xes"
 
 TARGET_IMG_FORMAT = "svg"
 

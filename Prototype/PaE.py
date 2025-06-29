@@ -35,7 +35,7 @@ os.environ["LANGCHAIN_PROJECT"] = "Deloitte_PAE"
 langchain.debug = True
 
 # Defining agent components
-model = ChatOpenAI(temperature=0, model_name="gpt-4-1106-preview")
+model = ChatOpenAI(temperature=0, model_name="gpt-4.1-mini")
 
 tools = tools_list
 

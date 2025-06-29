@@ -1,6 +1,6 @@
 import pm4py
 
-file_path = "/Users/maxvogt/Documents/GitHub/Thesis/Event Logs/roadtraffic100traces.xes"
+file_path = "./Event_Logs/roadtraffic100traces.xes"
 
 def execute_script():
     """

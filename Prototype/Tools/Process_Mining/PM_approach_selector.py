@@ -18,13 +18,13 @@ def approach_selector(user_query: str) -> str:
 
 
     # Reading approach mapping document
-    file_path = "/Users/maxvogt/Documents/GitHub/Thesis/GitHub/Master-Thesis/Prototype/Tools/Process_Mining/PM_approach_mapping.txt"
+    file_path = "./Prototype/Tools/Process_Mining/PM_approach_mapping.txt"
     with open(file_path, "r") as file:
         text = file.read()
     mapping = text
 
 
-    model = "gpt-3.5-turbo"
+    model = "gpt-4.1-mini"
     # Building prompt with ICL
     template = """"
     You are a world class process mining expert. Your task is to determine the best process mining approach based on the type of analysis that the user wants to execute. There are 3 options for the process mining approaches: (1) DFG, (2) Temporal Profile, (3) Variants.

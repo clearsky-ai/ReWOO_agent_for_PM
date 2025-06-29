@@ -10,7 +10,7 @@ def ChatGPT_response(input: str) -> str:
     """Send prompts to LLM and retrieve answer"""
     # Setting API key and model
     api_key = os.getenv('OPENAI_API_KEY')
-    model = "gpt-3.5-turbo"
+    model = "gpt-4.1-mini"
     # Building prompt
     template = ""
     prompt = template + input
