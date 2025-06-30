@@ -1,7 +1,7 @@
 import pm4py
 
-file_path = "./Event_Logs/roadtraffic100traces.xes"
-file_path = "./Event_Logs/BPI_Challenge_2013_incidents.xes"
+file_path = "/home/azureuser/localfiles/ReWOO_agent_for_PM/Event_Logs/O2C.csv"
+file_path = "./Event_Logs/O2C.xes"
 
 # Variants abstraction
 log = pm4py.read_xes(file_path)

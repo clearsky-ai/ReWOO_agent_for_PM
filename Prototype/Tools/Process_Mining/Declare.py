@@ -1,6 +1,6 @@
 import pm4py
 
-file_path = "./Event_Logs/roadtraffic100traces.xes"
+file_path = "/home/azureuser/localfiles/ReWOO_agent_for_PM/Event_Logs/O2C.csv"
 
 def execute_script():
     """

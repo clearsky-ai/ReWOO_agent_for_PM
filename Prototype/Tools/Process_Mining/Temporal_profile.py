@@ -11,9 +11,9 @@ from dotenv import load_dotenv
 # Load environment variables from .env file
 load_dotenv()
 
-file_path = "./Event_Logs/roadtraffic100traces.xes"
-file_path = "./Event_Logs/purchase_to_pay_event_log.csv"
-file_path = "./Event_Logs/order_to_cash_event_log_05012023.csv"
+file_path = "/home/azureuser/localfiles/ReWOO_agent_for_PM/Event_Logs/O2C.csv"
+file_path = "/home/azureuser/localfiles/ReWOO_agent_for_PM/Event_Logs/O2C.csv"
+file_path = "/home/azureuser/localfiles/ReWOO_agent_for_PM/Event_Logs/O2C.csv"
 
 def abstraction_temporal_profile(temp_log):
     # Temporal profile

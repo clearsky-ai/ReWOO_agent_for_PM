@@ -4,7 +4,7 @@ from pm4py.algo.discovery.alpha import algorithm as alpha_miner
 from pm4py.objects.log.importer.xes import importer as xes_importer
 from pm4py.visualization.petri_net import visualizer as pn_vis
 
-file_path = "./Event_Logs/PrepaidTravelCost.xes"
+file_path = "/home/azureuser/localfiles/ReWOO_agent_for_PM/Event_Logs/O2C.csv"
 
 TARGET_IMG_FORMAT = "svg"
 
