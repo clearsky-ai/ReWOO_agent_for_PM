@@ -11,9 +11,7 @@ from dotenv import load_dotenv
 # Load environment variables from .env file
 load_dotenv()
 
-file_path = "/home/azureuser/localfiles/ReWOO_agent_for_PM/Event_Logs/O2C.csv"
-file_path = "/home/azureuser/localfiles/ReWOO_agent_for_PM/Event_Logs/O2C.csv"
-file_path = "/home/azureuser/localfiles/ReWOO_agent_for_PM/Event_Logs/O2C.csv"
+file_path = "./Event_Logs/O2C.csv"
 
 def abstraction_temporal_profile(temp_log):
     # Temporal profile
@@ -85,7 +83,7 @@ def temporal_profile(file_path: str) -> str:
     analytics_visualizer(event_log, file_type)
 
     # Importing user query
-    file_path = "agent_input.txt"
+    file_path = "./agent_input.txt"
 
     with open(file_path, "r") as file:
         text = file.read()

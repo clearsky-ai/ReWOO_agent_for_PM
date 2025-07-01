@@ -2,7 +2,7 @@ import os
 import pm4py
 import pandas as pd
 
-file_path = "/home/azureuser/localfiles/ReWOO_agent_for_PM/Event_Logs/O2C.csv" 
+file_path = "./Event_Logs/O2C.csv" 
 dataframe = pd.read_csv(file_path)
 dataframe['timestamp'] = pd.to_datetime(dataframe['timestamp'])
 

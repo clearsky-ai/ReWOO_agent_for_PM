@@ -11,7 +11,7 @@ load_dotenv()
 
 # Defining custom tool for PM4PY
 def main(input: str) -> str:
-    file_path = "/home/azureuser/localfiles/ReWOO_agent_for_PM/Event_Logs/O2C.csv"
+    file_path = "./Event_Logs/O2C.csv"
     # Distinction between CSV and XES file formats
     if "csv" in file_path:
       # For CSV file formats paramters for 3 columns have to be set manually here

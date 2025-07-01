@@ -166,7 +166,7 @@ async def run(input):
                 print(v)
 
 async def main():
-    task = "Can you find the bottlenecks and inefficiencies in process based on the folowing event log, filepath=/home/azureuser/localfiles/ReWOO_agent_for_PM/Event_Logs/O2C.csv? This is an order to cash process at Procter & Gamble (P&G). What are potential causes for the inefficiencies that you identified? Base your answers on characteristics of this type of organization and the sector"
+    task = "Can you find the bottlenecks and inefficiencies in process based on the folowing event log, filepath=./Event_Logs/O2C.csv? This is an order to cash process at Procter & Gamble (P&G). What are potential causes for the inefficiencies that you identified? Base your answers on characteristics of this type of organization and the sector"
     await run(task)
 
 # Call the main function to start the asynchronous execution

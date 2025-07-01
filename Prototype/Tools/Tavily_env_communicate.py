@@ -11,10 +11,11 @@ import subprocess
 from General_Settings import Level_of_detail
 
 async def run_python_script_in_environment(python_file_path, input_question):
+
     try:
         # Activate the virtual environment and run the Python script within it
         process = await asyncio.create_subprocess_exec(
-            "python", python_file_path, input_question,
+            "./venv/bin/python3.10", python_file_path, input_question,
             stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
         )
         stdout, stderr = await process.communicate()

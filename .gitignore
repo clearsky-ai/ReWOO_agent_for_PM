@@ -1,3 +1,4 @@
 .env
 ./Prototype/__pycache__
 *.pyc
+venv/

@@ -41,7 +41,7 @@ def process_discovery(file_path: str) -> str:
     analytics_visualizer(event_log, file_type)
 
     # Importing user query
-    file_path = "agent_input.txt"
+    file_path = "./agent_input.txt"
 
     with open(file_path, "r") as file:
         text = file.read()

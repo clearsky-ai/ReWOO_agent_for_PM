@@ -10,7 +10,7 @@ from dotenv import load_dotenv
 # Load environment variables from .env file
 load_dotenv()
 
-file_path = "/home/azureuser/localfiles/ReWOO_agent_for_PM/Event_Logs/O2C.csv"
+file_path = "./Event_Logs/O2C.csv"
 
 @tool
 def variants(file_path):

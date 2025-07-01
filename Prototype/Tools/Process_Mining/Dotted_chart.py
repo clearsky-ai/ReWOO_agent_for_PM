@@ -11,6 +11,6 @@ def dotted_chart_vis(event_log):
     return
 
 if __name__ == "__main__":
-    file_path = "/home/azureuser/localfiles/ReWOO_agent_for_PM/Event_Logs/O2C.csv"
+    file_path = "./Event_Logs/O2C.csv"
     event_log = pm4py.read_xes(file_path, return_legacy_log_object=True)
     dotted_chart_vis(event_log)

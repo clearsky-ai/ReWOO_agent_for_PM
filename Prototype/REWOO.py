@@ -109,6 +109,8 @@ def tool_execution(state: ReWOO):
         tool_input = tool_input.replace(k, v)
     if tool == "Google":
         result = search.invoke(tool_input)
+    elif tool == "human":
+        result = human(tool_input)
     elif tool == "Generate_report":
         result = Generate_report(tool_input)
     elif tool == "ProcessDiscovery_DFG":
@@ -183,9 +185,9 @@ if __name__ == "__main__":
 
     # task 1 (P&G case) has hardcoded research reports in the "Test_reports" folder
     # required class settings: sep = ';', Case id, Activity name, Timestamp
-    # task1_TP = "Can you find the bottlenecks and inefficiencies in process based on the following event log, filepath=/home/azureuser/localfiles/ReWOO_agent_for_PM/Event_Logs/O2C.csv? This is an order to cash process at Procter & Gamble (P&G). What are potential causes for the inefficiencies that you identified? Please use the temporal profile approach for process discovery."
-    # task1_DFG = "Can you find the bottlenecks and inefficiencies in process based on the following event log, filepath=/home/azureuser/localfiles/ReWOO_agent_for_PM/Event_Logs/O2C.csv? This is an order to cash process at Procter & Gamble (P&G). What are potential causes for the inefficiencies that you identified? Please use the DFG approach for process discovery."
-    # task1_var = "Can you find the bottlenecks and inefficiencies in process based on the following event log, filepath=/home/azureuser/localfiles/ReWOO_agent_for_PM/Event_Logs/O2C.csv? This is an order to cash process at Procter & Gamble (P&G). What are potential causes for the inefficiencies that you identified? Please use the variants approach for process discovery."
+    # task1_TP = "Can you find the bottlenecks and inefficiencies in process based on the following event log, filepath=./Event_Logs/O2C.csv? This is an order to cash process at Procter & Gamble (P&G). What are potential causes for the inefficiencies that you identified? Please use the temporal profile approach for process discovery."
+    # task1_DFG = "Can you find the bottlenecks and inefficiencies in process based on the following event log, filepath=./Event_Logs/O2C.csv? This is an order to cash process at Procter & Gamble (P&G). What are potential causes for the inefficiencies that you identified? Please use the DFG approach for process discovery."
+    # task1_var = "Can you find the bottlenecks and inefficiencies in process based on the following event log, filepath=./Event_Logs/O2C.csv? This is an order to cash process at Procter & Gamble (P&G). What are potential causes for the inefficiencies that you identified? Please use the variants approach for process discovery."
 
     # required class settings: sep = ',', case_id, activity, timestamp
     task2_DFG = "Can you find the bottlenecks and inefficiencies in process based on the following event log, filepath=./Event_Logs/purchase_to_pay_event_log.csv? This is an purchase to pay process at IKEA. What are potential causes for the inefficiencies that you identified? Please use the DFG approach for process discovery."
@@ -199,19 +201,19 @@ if __name__ == "__main__":
     task2_TP_financial_risk = "Can you find the financial risks in the process based on the following event log, filepath=./Event_Logs/purchase_to_pay_event_log.csv? This is an purchase to pay process at IKEA. What are the financial risks for specific steps that you identified? Please use the temporal profile approach for process discovery."
 
     # For P&G
-    task1_var_audit_risk = "Can you find the causes for audit risks in process based on the following event log, filepath=/home/azureuser/localfiles/ReWOO_agent_for_PM/Event_Logs/O2C.csv? This is an order to cash process at Procter & Gamble (P&G). What are the audit risks for specific steps that you identified? Please use the variants approach for process discovery."
+    task1_var_audit_risk = "Can you find the causes for audit risks in process based on the following event log, filepath=./Event_Logs/O2C.csv? This is an order to cash process at Procter & Gamble (P&G). What are the audit risks for specific steps that you identified? Please use the variants approach for process discovery."
 
     # For Amazon
-    task1_var_audit_risk_Amazon = "Can you find the causes for audit risks in process based on the following event log, filepath=/home/azureuser/localfiles/ReWOO_agent_for_PM/Event_Logs/O2C.csv? This is an order to cash process at Amazon. What are the audit risks for specific steps that you identified? Please use the variants approach for process discovery."
+    task1_var_audit_risk_Amazon = "Can you find the causes for audit risks in process based on the following event log, filepath=./Event_Logs/O2C.csv? This is an order to cash process at Amazon. What are the audit risks for specific steps that you identified? Please use the variants approach for process discovery."
 
     # Amazon example without specified PM approach
-    task1_audit_risk_NA = "Can you find the causes for audit risks in process based on the following event log, filepath=/home/azureuser/localfiles/ReWOO_agent_for_PM/Event_Logs/O2C.csv? This is an order to cash process at Amazon. What are the audit risks for specific steps that you identified?"
-    task1_inefficiency_NA = "Can you find the bottlenecks and inefficiencies in process based on the following event log, filepath=/home/azureuser/localfiles/ReWOO_agent_for_PM/Event_Logs/O2C.csv? This is an order to cash process at Procter & Gamble (P&G). What are potential causes for the inefficiencies that you identified?"
+    task1_audit_risk_NA = "Can you find the causes for audit risks in process based on the following event log, filepath=./Event_Logs/O2C.csv? This is an order to cash process at Amazon. What are the audit risks for specific steps that you identified?"
+    task1_inefficiency_NA = "Can you find the bottlenecks and inefficiencies in process based on the following event log, filepath=./Event_Logs/O2C.csv? This is an order to cash process at Procter & Gamble (P&G). What are potential causes for the inefficiencies that you identified?"
     task2_TP_cyber_NA = "Can you find the cyber security risks in the process based on the following event log, filepath=./Event_Logs/purchase_to_pay_event_log.csv? This is an purchase to pay process at IKEA. What are the cyber security risks for specific steps that you identified?"
 
     # Paper experiment query
     # nr 1 - Audit (P&G)
-    exp_DFG_audit = "Can you find the audit risks in the process based on the following event log, filepath=/home/azureuser/localfiles/ReWOO_agent_for_PM/Event_Logs/O2C.csv? This is an order to cash process at Procter & Gamble (P&G). What are the audit risks for specific steps that you identified? Please use the DFG approach for process discovery."
+    exp_DFG_audit = "Can you find the audit risks in the process based on the following event log, filepath=./Event_Logs/O2C.csv? This is an order to cash process at Procter & Gamble (P&G). What are the audit risks for specific steps that you identified? Please use the DFG approach for process discovery."
     # nr 2 - Regulatory (Wells Fargo)
     exp_TP_regulatory = "Can you find the regulatory risks in the process based on the following event log, filepath=./Event_Logs/LoanApplication.xes? This is a loan application process at Wells Fargo bank. What are the regulatory risks for specific steps that you identified? Please use the temporal profile approach for process discovery."
         # nr 2 - variants approach
@@ -221,11 +223,13 @@ if __name__ == "__main__":
     # nr 4 - inefficiencies (Volvo):
     exp_DFG_inefficiencies = "Find the bottlenecks and inefficiencies in process based on the folowing event log, filepath ./Event_Logs/BPI_Challenge_2013_incidents.xes? This is the process of handling IT incidents at Volvo. provide common causes and remediations for the inefficiencies in this process."
 
+
+    task3_inefficiency_NA = "Can you find the bottlenecks and inefficiencies in process based on the following event log, filepath=./Event_Logs/O2C.csv? This is an order to cash process at Amazon. What are potential causes for the inefficiencies that you identified?"
     # Running the agent
-    agent_input_query = task1_var_audit_risk
+    agent_input_query = task3_inefficiency_NA
 
     # Writing agent input to file
-    file_write = open("agent_input.txt", "w")
+    file_write = open("./agent_input.txt", "w")
     file_write.write(agent_input_query)
     file_write.close()
     
@@ -233,7 +237,7 @@ if __name__ == "__main__":
     print("Final output: \n", agent_response)
 
     # Writing agent response to file
-    file_write = open("output_agent.txt", "w")
+    file_write = open("./output_agent.txt", "w")
     file_write.write(agent_response)
     file_write.close()
 

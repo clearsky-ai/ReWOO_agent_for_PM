@@ -2,7 +2,7 @@ import pm4py
 import pandas as pd
 
 file_path= "./Event_Logs/flight_event_log.csv"
-file_path = "/home/azureuser/localfiles/ReWOO_agent_for_PM/Event_Logs/O2C.csv"
+file_path = "./Event_Logs/O2C.csv"
 
 # df = pd.read_csv(file_path, sep=',')
 # print(df.columns)
