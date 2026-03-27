@@ -35,7 +35,7 @@ os.environ["LANGCHAIN_PROJECT"] = "Deloitte_PAE"
 langchain.debug = True
 
 # Defining agent components
-model = ChatOpenAI(temperature=0, model_name="gpt-4-1106-preview")
+model = ChatOpenAI(temperature=0, model_name="gpt-4.1-mini")
 
 tools = tools_list
 
@@ -166,7 +166,7 @@ async def run(input):
                 print(v)
 
 async def main():
-    task = "Can you find the bottlenecks and inefficiencies in process based on the folowing event log, filepath=/Users/maxvogt/Downloads/Event logs/order_to_cash_event_log_05012023.csv? This is an order to cash process at Procter & Gamble (P&G). What are potential causes for the inefficiencies that you identified? Base your answers on characteristics of this type of organization and the sector"
+    task = "Can you find the bottlenecks and inefficiencies in process based on the folowing event log, filepath=./Event_Logs/O2C.csv? This is an order to cash process at Procter & Gamble (P&G). What are potential causes for the inefficiencies that you identified? Base your answers on characteristics of this type of organization and the sector"
     await run(task)
 
 # Call the main function to start the asynchronous execution

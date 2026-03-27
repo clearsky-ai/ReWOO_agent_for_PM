@@ -3,8 +3,10 @@ import asyncio
 from fastapi import WebSocket
 
 from gpt_researcher import GPTResearcher
-from gpt_researcher.master.functions import (add_source_urls, extract_headers,
-                                             table_of_contents)
+from gpt_researcher.actions.markdown_processing import (
+    extract_headers,
+    table_of_contents
+)
 
 
 class DetailedReport():
@@ -138,6 +140,6 @@ class DetailedReport():
         toc = table_of_contents(report_body)
         
         # Concatenating all source urls at the end of the report
-        report_with_references = add_source_urls(report_body, self.main_task_assistant.visited_urls)
+        # report_with_references = add_source_urls(report_body, self.main_task_assistant.visited_urls)
         
-        return f"{introduction}\n\n{toc}\n\n{report_with_references}"
+        return f"{introduction}\n\n{toc}"

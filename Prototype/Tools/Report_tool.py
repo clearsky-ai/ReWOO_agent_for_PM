@@ -22,7 +22,7 @@ def Report2(input: str) -> str:
     """
 
     outputparser = StrOutputParser()
-    llm = ChatOpenAI(temperature=0, model_name="gpt-4-1106-preview")
+    llm = ChatOpenAI(temperature=0, model_name="gpt-4.1-mini")
 
     if Level_of_detail.detailled == True:
         prompt = ChatPromptTemplate.from_template(report_prompt_detailed)
@@ -54,10 +54,10 @@ def Report(input: str) -> str:
     """
 
     outputparser = StrOutputParser()
-    llm = ChatOpenAI(temperature=0, model_name="gpt-4-1106-preview")
+    llm = ChatOpenAI(temperature=0, model_name="gpt-4.1-mini")
 
     if Level_of_detail.detailled == True:
-        model = "gpt-3.5-turbo"
+        model = "gpt-4.1-mini"
         # Building prompt with ICL
         template = report_prompt_detailed
         # Removing subparts of report

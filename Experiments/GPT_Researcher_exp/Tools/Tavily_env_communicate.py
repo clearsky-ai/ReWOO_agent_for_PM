@@ -10,11 +10,11 @@ import asyncio
 import subprocess
 from General_Settings import Level_of_detail
 
-async def run_python_script_in_environment(venv_activate_path, python_file_path, input_question):
+async def run_python_script_in_environment(python_file_path, input_question):
     try:
         # Activate the virtual environment and run the Python script within it
         process = await asyncio.create_subprocess_exec(
-            f"{venv_activate_path}/bin/python3.11", python_file_path, input_question,
+            "python", python_file_path, input_question,
             stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
         )
         stdout, stderr = await process.communicate()
@@ -29,10 +29,10 @@ async def run_python_script_in_environment(venv_activate_path, python_file_path,
         print(f"Error running Python script in virtual environment: {e}")
         return None
 
-async def call_other_environment(venv_activate_path, python_file_path, input_question):
+async def call_other_environment(python_file_path, input_question):
     try:
         report = await run_python_script_in_environment(
-            venv_activate_path, python_file_path, input_question
+            python_file_path, input_question
         )
         if report is None:
             sys.exit("Stopped execution, report returned none")
@@ -50,7 +50,7 @@ async def call_other_environment(venv_activate_path, python_file_path, input_que
         #     report = report[index_intro:]
 
         if Level_of_detail.detailled == True:
-            file_path = "/Users/maxvogt/Documents/GitHub/Thesis/GitHub/Master-Thesis/Prototype/detailed_report_storage.txt"
+            file_path = "./Prototype/detailed_report_storage.txt"
 
             with open(file_path, "r") as file:
                 text = file.read()

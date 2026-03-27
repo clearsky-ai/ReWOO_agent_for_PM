@@ -1,8 +1,8 @@
 import pm4py
 import pandas as pd
 
-file_path= "/Users/maxvogt/Documents/GitHub/Thesis/Event Logs/flight_event_log.csv"
-file_path = "/Users/maxvogt/Documents/GitHub/Thesis/Event Logs/roadtraffic100traces.xes"
+file_path= "./Event_Logs/flight_event_log.csv"
+file_path = "./Event_Logs/O2C.csv"
 
 # df = pd.read_csv(file_path, sep=',')
 # print(df.columns)

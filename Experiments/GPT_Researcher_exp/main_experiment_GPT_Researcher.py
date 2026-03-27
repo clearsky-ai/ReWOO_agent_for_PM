@@ -6,14 +6,14 @@ from Tools.GPT_Researcher_GitHub.Detailed_report import DetailedReport
 from dotenv import load_dotenv
 
 # Load environment variables from .env file
-dotenv_path = '/Users/maxvogt/Documents/GitHub/Thesis/GitHub/Master-Thesis/.env'
+dotenv_path = './.env'
 load_dotenv(dotenv_path)
 
 os.environ["OPENAI_API_KEY"] = os.getenv('OPENAI_API_KEY')
 os.environ["TAVILY_API_KEY"] = os.getenv('TAVILY_API_KEY')
 
 # Constants
-DETAILED_REPORT_FILE = "/Users/maxvogt/Documents/GitHub/Thesis/GitHub/Master-Thesis/Prototype/detailed_report_storage.txt"
+DETAILED_REPORT_FILE = "./Prototype/detailed_report_storage.txt"
 
 async def detailed_run(input_query):
     """

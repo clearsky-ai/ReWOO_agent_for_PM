@@ -8,6 +8,6 @@ def SNA_vis(file_path):
 
 
 if __name__ == "__main__":
-    file_path = "/Users/maxvogt/Documents/GitHub/Thesis/Event Logs/receipt.xes"
-    file_path = "/Users/maxvogt/Documents/GitHub/Thesis/Event Logs/review_example_large.xes"
+    file_path = "./Event_Logs/receipt.xes"
+    file_path = "./Event_Logs/review_example_large.xes"
     SNA_vis(file_path)

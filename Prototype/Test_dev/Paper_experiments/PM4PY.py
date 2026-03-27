@@ -3,7 +3,7 @@ import pandas as pd
 import os
 import sys
 from dotenv import load_dotenv
-sys.path.append('/Users/maxvogt/Documents/GitHub/Thesis/GitHub/Master-Thesis/Prototype/Tools/Process_Mining/')
+sys.path.append('./Prototype/Tools/Process_Mining/')
 from CSV_config import CSV_format
 
 # Load environment variables from .env file
@@ -11,7 +11,7 @@ load_dotenv()
 
 # Defining custom tool for PM4PY
 def main(input: str) -> str:
-    file_path = "/Users/maxvogt/Downloads/Event logs/order_to_cash_event_log_05012023.csv"
+    file_path = "./Event_Logs/O2C.csv"
     # Distinction between CSV and XES file formats
     if "csv" in file_path:
       # For CSV file formats paramters for 3 columns have to be set manually here
@@ -32,7 +32,7 @@ def main(input: str) -> str:
     abstraction = pm4py.llm.abstract_dfg(event_log)
    
     openai_key = os.getenv('OPENAI_API_KEY')
-    model = "gpt-3.5-turbo"
+    model = "gpt-4.1-mini"
 
     prompt = input + abstraction
     print(prompt)

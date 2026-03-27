@@ -1,6 +1,6 @@
 import pm4py
 
-file_path = "/Users/maxvogt/Documents/GitHub/Thesis/Event Logs/roadtraffic100traces.xes"
+file_path = "./Event_Logs/O2C.csv"
 
 event_log = pm4py.read_xes(file_path)
 df = pm4py.convert_to_dataframe(event_log)

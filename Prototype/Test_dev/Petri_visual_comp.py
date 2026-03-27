@@ -9,7 +9,7 @@ from pm4py.visualization.petri_net import visualizer as pn_vis
 from pm4py.objects.conversion.process_tree import converter as process_tree_converter
 
 TARGET_IMG_FORMAT = "svg"
-file_path = "/Users/maxvogt/Documents/GitHub/Thesis/Event Logs/Sepsis Cases - Event Log.xes"
+file_path = "./Event_Logs/Sepsis Cases - Event Log.xes"
 
 def execute_script():
     log = xes_importer.apply(os.path.join("..", "tests", "input_data", file_path))

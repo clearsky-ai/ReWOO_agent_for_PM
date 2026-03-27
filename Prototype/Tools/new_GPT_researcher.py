@@ -6,20 +6,20 @@ from GPT_Researcher_GitHub.Detailed_report import DetailedReport
 # from Prototype.Test_reports.detailed_report1 import detailed_report_1
 from dotenv import load_dotenv
 import sys
-sys.path.append('/Users/maxvogt/Documents/GitHub/Thesis/GitHub/Master-Thesis/Prototype/Test_reports/')
+sys.path.append('./Prototype/Test_reports/')
 from detailed_report1 import detailed_report_1
-sys.path.append('/Users/maxvogt/Documents/GitHub/Thesis/GitHub/Master-Thesis/Prototype/')
+sys.path.append('./Prototype/')
 from General_Settings import Level_of_detail
 
 # Load environment variables from .env file
-dotenv_path = '/Users/maxvogt/Documents/GitHub/Thesis/GitHub/Master-Thesis/.env'
+dotenv_path = './.env'
 load_dotenv(dotenv_path)
 
 os.environ["OPENAI_API_KEY"] = os.getenv('OPENAI_API_KEY')
 os.environ["TAVILY_API_KEY"] = os.getenv('TAVILY_API_KEY')
 
 # Constants
-DETAILED_REPORT_FILE = "/Users/maxvogt/Documents/GitHub/Thesis/GitHub/Master-Thesis/Prototype/detailed_report_storage.txt"
+DETAILED_REPORT_FILE = "./Prototype/detailed_report_storage.txt"
 
 
 async def fetch_report(query: str, report_type: str) -> str:

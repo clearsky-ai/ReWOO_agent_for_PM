@@ -11,9 +11,7 @@ from dotenv import load_dotenv
 # Load environment variables from .env file
 load_dotenv()
 
-file_path = "/Users/maxvogt/Documents/GitHub/Thesis/Event Logs/roadtraffic100traces.xes"
-file_path = "/Users/maxvogt/Documents/GitHub/Thesis/Event Logs/purchase_to_pay_event_log.csv"
-file_path = "/Users/maxvogt/Documents/GitHub/Thesis/Event Logs/order_to_cash_event_log_05012023.csv"
+file_path = "./Event_Logs/O2C.csv"
 
 def abstraction_temporal_profile(temp_log):
     # Temporal profile
@@ -85,14 +83,14 @@ def temporal_profile(file_path: str) -> str:
     analytics_visualizer(event_log, file_type)
 
     # Importing user query
-    file_path = "agent_input.txt"
+    file_path = "./agent_input.txt"
 
     with open(file_path, "r") as file:
         text = file.read()
     original_query = text
    
     openai_key = os.getenv('OPENAI_API_KEY')
-    model = "gpt-3.5-turbo"
+    model = "gpt-4.1-mini"
     # Building prompt with ICL
     template = """"
     You are a world class process consultant, specialized in analyzing processes and the components of processes. You will be tasked to make an analysis on a provided process (for instance on inefficiencies, audit risks, regulatory risks, etc.). From this process you will have to select a top 3 of process steps or components.
